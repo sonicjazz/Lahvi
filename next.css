@@ -1,0 +1,35 @@
+/* styles.css */
+
+
+.wrapper {
+    height: 60vh;
+    display: grid;
+    place-items: center;
+}
+
+.typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 15px;
+    margin-down:50px;
+    animation-fill-mode: forwards; /* Ensure the animation holds the last keyframe state */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Change this to 100% to fill the entire line */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
